@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mukil Karki M — Founder, Creovisia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="founder.css">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    :root {
+      --bg: #04040a;
+      --surface: #0a0a14;
+      --border: rgba(255, 255, 255, 0.06);
+      --accent: #7c6ef7;
+      --accent2: #e05aff;
+      --accent3: #00f5c4;
+      --text: #eceaf6;
+      --muted: #7875a0;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Syne', sans-serif;
+      overflow-x: hidden;
+      cursor: none
+    }
+
+    /* Cursor */
+    #cur {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 9999;
+      transition: transform .12s
+    }
+
+    #curl {
+      position: fixed;
+      width: 34px;
+      height: 34px;
+      border: 1.5px solid rgba(124, 110, 247, .5);
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 9998;
+      transition: all .22s cubic-bezier(.23, 1, .32, 1)
+    }
+
+    /* Background */
+    #noise {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1000;
+      opacity: .4;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E")
+    }
+
+    #grid {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image: linear-gradient(rgba(124, 110, 247, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(124, 110, 247, .035) 1px, transparent 1px);
+      background-size: 64px 64px
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="noise"></div>
+  <div id="grid"></div>
+  <div id="cur"></div>
+  <div id="curl"></div>
+
+  <!-- Overlay -->
+  <div id="overlay" onclick="dClose()"></div>
+
+  <!-- Side Drawer -->
+  <div id="drawer">
+    <div class="dr-head">
+      <span class="dr-logo">MKM</span>
+      <button class="dr-close" onclick="dClose()">&#x2715;</button>
+    </div>
+    <div class="dr-profile">
+      <div class="dr-avatar">
+        <img src="assets/founder.jpg" alt="Mukil Karki M">
+      </div>
+      <div>
+        <div class="dr-pname">Mukil Karki M</div>
+        <div class="dr-prole">Founder &middot; Creovisia</div>
+      </div>
+    </div>
+    <nav class="dr-nav">
+      <a href="#about" onclick="dClose()"><span class="dn">01</span>About</a>
+      <a href="#education" onclick="dClose()"><span class="dn">02</span>Education</a>
+      <a href="#experience" onclick="dClose()"><span class="dn">03</span>Experience</a>
+      <a href="#projects" onclick="dClose()"><span class="dn">04</span>Projects</a>
+      <a href="#products" onclick="dClose()"><span class="dn">05</span>Creovisia</a>
+      <a href="#vision" onclick="dClose()"><span class="dn">06</span>Vision</a>
+      <a href="#contact" onclick="dClose()"><span class="dn">07</span>Contact</a>
+    </nav>
+    <div class="dr-foot">
+      <a href="#" class="dr-soc">X</a>
+      <a href="#" class="dr-soc">in</a>
+      <a href="#" class="dr-soc">&lt;/&gt;</a>
+      <a href="https://creovisia.vercel.app" class="dr-soc" target="_blank">&#x1F310;</a>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <header id="nav">
+    <a href="#hero" class="nav-logo">MKM</a>
+    <a href="#contact" class="nav-cta">Let's Talk</a>
+  </header>
+
+  <!-- Float Button -->
+  <button id="floatBtn" onclick="dToggle()">
+    <span class="fb-lines"><span></span><span></span><span></span></span>
+    <span class="fb-label">MENU</span>
+  </button>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="h-orb1"></div>
+    <div class="h-orb2"></div>
+    <div class="h-left">
+      <div class="h-eyebrow" id="eyebrow"></div>
+      <h1 class="h-name">
+        <img src="assets/founder.jpg" width="300px" height="300px" alt="Mukil Karki M">
+        <br>
+        <br>
+        <span class="n1">Mukil Karki</span>
+        <span class="n2">M.</span>
+      </h1>
+      <p class="h-sub">Founder of Creovisia &mdash; Turning creativity into reality.</p>
+      <p class="h-desc">I build AI-powered EdTech products from Tamil Nadu that make learning more intelligent,
+        accessible, and delightful for teachers, students, and schools across India.</p>
+      <div class="h-btns">
+        <a href="#products" class="btn-p">View My Work</a>
+        <a href="#contact" class="btn-g">Get In Touch</a>
+      </div>
+    </div>
+    <div class="h-right">
+      <!-- <div class="h-avatar">
+        <img src="assets/founder.jpg" alt="Mukil Karki M">
+      </div> -->
+      <div class="h-badge">Available for Collaboration</div>
+      <div class="h-stats">
+        <div class="h-stat"><span class="h-stat-lbl">Products</span><span class="h-stat-num">2+</span></div>
+        <div class="h-stat"><span class="h-stat-lbl">Projects</span><span class="h-stat-num">3+</span></div>
+        <div class="h-stat"><span class="h-stat-lbl">Vision</span><span class="h-stat-num">&#x221E;</span></div>
+      </div>
+    </div>
+    <div class="h-scroll">
+      <div class="h-scroll-line"></div>
+      <span class="h-scroll-txt">Scroll</span>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="ab-body reveal">
+      <div class="sec-tag">01 / About Me</div>
+      <h2 class="sec-title">I build things<br>that <em>matter.</em></h2>
+      <p>I'm <strong>Mukil Karki M</strong>, the founder of <strong>Creovisia</strong> &mdash; a digital startup I'm
+        building from scratch to bridge the gap between creativity and technology in education. Based in Tamil Nadu, I
+        ship AI-powered tools that solve real problems for Indian educators, learners and creators.</p>
+      <p>I wear every hat &mdash; product thinker, designer, developer, and growth strategist. Working lean means I move
+        fast, iterate often, and prioritize products people genuinely love using.</p>
+      <p><strong>Creovisia</strong> isn't just a startup. It's a brand built on a promise: <em>creativity into
+          reality.</em></p>
+      <a href="#contact" class="btn-p">Collaborate with Me</a>
+    </div>
+    <div class="ab-side">
+      <div class="info-card ic-a reveal d1">
+        <h4>Skills &amp; Stack</h4>
+        <div class="chips">
+          <span class="chip">Product Design</span><span class="chip">SaaS</span>
+          <span class="chip">Firebase</span><span class="chip">HTML/CSS/JS</span>
+          <span class="chip">React</span><span class="chip">AI Integration</span>
+          <span class="chip">Automation</span><span class="chip">EdTech Strategy</span>
+          <span class="chip">UI/UX</span><span class="chip">Growth &amp; GTM</span>
+        </div>
+      </div>
+      <div class="info-card ic-b reveal d2">
+        <h4>Find Me Online</h4>
+        <div class="soc-list">
+          <a href="#" class="soc-link"><span class="soc-ico">X</span>@mukil_karki</a>
+          <a href="#" class="soc-link"><span class="soc-ico">in</span>linkedin.com/in/mukilkarki</a>
+          <a href="#" class="soc-link"><span class="soc-ico">&lt;/&gt;</span>github.com/mukilkarki</a>
+          <a href="https://creovisia.vercel.app" class="soc-link"><span class="soc-ico">&#x1F310;</span>creovisia.vercel.app</a>
+        </div>
+      </div>
+      <div class="info-card ic-c reveal d3">
+        <h4>Based In</h4>
+        <div style="font-size:14px;color:var(--text);margin-bottom:8px;">&#x1F4CD; Tamil Nadu, India</div>
+        <div style="font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1px;">Open to
+          Collaboration &middot; Investor Talks &middot; AI & EdTech Partnerships</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="reveal">
+      <div class="sec-tag">02 / Education</div>
+      <h2 class="sec-title">Academic <em>Foundation</em></h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card reveal d1">
+        <div class="edu-year">2026 &mdash; on going</div>
+        <div class="edu-deg">B.E./B.Tech Electronics and Communication &amp; Engineering (ECE)</div>
+        <div class="edu-inst">The Sethu Institute of Technology (SIT), Virudhunagar</div>
+        <p class="edu-desc">Focused on . It covers semiconductor physics, circuit design, and telecommunications, opening doors to careers in chip design (VLSI), embedded systems, IoT, AI, and the IT/software sector.. Active
+          in the college coding club and technical events.</p>
+        <span class="edu-badge">Current &middot; 1st Year</span>
+      </div>
+      <div class="edu-card reveal d2">
+        <div class="edu-year">2024 &mdash; 2026</div>
+        <div class="edu-deg">Higher Secondary (Class XI & XII)</div>
+        <div class="edu-inst">Krishnamal Ramasubbaiyer School(CBSE), Madurai</div>
+        <p class="edu-desc">Completed under Centeral Board with Biology, Chemistry, Mathematics, and Physics.
+          Scored 92% overall.</p>
+        <span class="edu-badge">Completed &middot; Distinction</span>
+      </div>
+      <div class="edu-card reveal d3">
+        <div class="edu-year">2024 &mdash; ----</div>
+        <div class="edu-deg">Higher (Class PKG-X)</div>
+        <div class="edu-inst">St. Mary's School Kariyapatti, Virudhunagar</div>
+        <p class="edu-desc">Completed under Tamil Nadu State Board with Biology, Chemistry, Mathematics, and Physics.
+          Scored 92% overall.</p>
+        <span class="edu-badge">Completed &middot; Distinction</span>
+      </div>
+      <div class="edu-card reveal d4">
+        <div class="edu-year">Online &middot; 2024</div>
+        <div class="edu-deg">AI &amp; Prompt Engineering</div>
+        <div class="edu-inst">Anthropic Resources &middot; DeepLearning.AI</div>
+        <p class="edu-desc">Studied LLM APIs, prompt engineering, and AI product integration. Applied directly to
+          building VoidSEO AI on the Claude API.</p>
+        <span class="edu-badge">Applied &middot; Ongoing</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="reveal">
+      <div class="sec-tag">03 / Experience</div>
+      <h2 class="sec-title">Work <em>Timeline</em></h2>
+    </div>
+    <div class="exp-wrap">
+      <div class="exp-item reveal d1">
+        <div class="exp-period">Jan 2024 &mdash; Present</div>
+        <div class="exp-role">Founder &amp; CEO</div>
+        <div class="exp-co">Creovisia</div>
+        <p class="exp-desc">Building a multi-product EdTech SaaS brand from the ground up. Leading product strategy,
+          design, development, and go-to-market for Qublera and VoidSEO AI.</p>
+        <div class="exp-tags">
+          <span class="exp-tag">Product Strategy</span><span class="exp-tag">SaaS</span>
+          <span class="exp-tag">AI Integration</span><span class="exp-tag">EdTech</span><span
+            class="exp-tag">Fundraising</span>
+        </div>
+      </div>
+      <div class="exp-item reveal d2">
+        <div class="exp-period">Jun 2023 &mdash; Dec 2023</div>
+        <div class="exp-role">Freelance Web Developer</div>
+        <div class="exp-co">Independent &middot; Remote</div>
+        <p class="exp-desc">Designed and built responsive websites for small businesses in Tamil Nadu. Delivered 6+
+          projects using HTML, CSS, JavaScript, and Firebase.</p>
+        <div class="exp-tags">
+          <span class="exp-tag">HTML/CSS/JS</span><span class="exp-tag">Firebase</span>
+          <span class="exp-tag">Client Work</span><span class="exp-tag">Landing Pages</span>
+        </div>
+      </div>
+     <!-- <div class="exp-item reveal d3">
+        <div class="exp-period">Mar 2023 &mdash; May 2023</div>
+        <div class="exp-role">Web Development Intern</div>
+        <div class="exp-co">TechSpark Solutions, Chennai</div>
+        <p class="exp-desc">Assisted senior developers building internal dashboards and admin panels. Contributed to
+          front-end UI components and gained agile workflow experience.</p>
+        <div class="exp-tags">
+          <span class="exp-tag">React</span><span class="exp-tag">Agile</span>
+          <span class="exp-tag">UI Components</span><span class="exp-tag">Internship</span>
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="reveal">
+      <div class="sec-tag">04 / Projects</div>
+      <h2 class="sec-title">What I've <em>built</em></h2>
+    </div>
+    <div class="proj-grid">
+      <div class="proj-card proj-feat reveal d1">
+        <div class="proj-num">Project 01</div>
+        <div class="proj-icon">&#x1F916;</div>
+        <div class="proj-name">EDITH AI</div>
+        <div class="proj-sub">Your personal web assistant.</div>
+        <p class="proj-desc">An AI-powered web assistant that helps users search, summarize, and interact with web
+          content in natural language using the free APIs.</p>
+        <div class="proj-stack"><span class="st">Free API</span><span class="st">JavaScript</span><span
+            class="st">HTML/CSS</span><span class="st">Firebase</span></div>
+        <a href="#" class="proj-link">View Project &#x2192;</a>
+      </div>
+      <div class="proj-card reveal d2">
+        <div class="proj-num">Project 02</div>
+        <div class="proj-icon">&#x1F4C4;</div>
+        <div class="proj-name">Qublera</div>
+        <div class="proj-sub">Question paper creator for TN Board.</div>
+        <p class="proj-desc">A SaaS tool for Samacheer Kalvi Class 10 teachers to generate bilingual question papers
+          across 5 subjects and download as PDFs instantly.</p>
+        <div class="proj-stack"><span class="st">Firebase</span><span class="st">HTML/CSS/JS</span><span
+            class="st">SaaS</span></div>
+        <a href="#products" class="proj-link">Full Details &#x2192;</a>
+      </div>
+      <div class="proj-card reveal d3">
+        <div class="proj-num">Project 03</div>
+        <div class="proj-icon">&#x1F9E9;</div>
+        <div class="proj-name">Portfolio V1</div>
+        <div class="proj-sub">This is my first personal brand website.</div>
+        <p class="proj-desc">Designed and built my first portfolio from scratch using HTML, CSS, and JavaScript.
+          Practiced responsive layout, animation, and brand identity.</p>
+        <div class="proj-stack"><span class="st">HTML/CSS</span><span class="st">JavaScript</span><span class="st">UI
+            Design</span></div>
+        <a href="#" class="proj-link">View Project &#x2192;</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <div class="reveal">
+      <div class="sec-tag">05 / Creovisia</div>
+      <h2 class="sec-title">The Startup I'm <em>Building</em></h2>
+    </div>
+    <div class="creo-banner reveal">
+      <div class="cb-top">
+        <div>
+          <div class="cb-title"><span>Creovisia</span></div>
+          <div class="cb-tagline">A multi-product AI & EdTech brand. Built in Tamil Nadu, scaling to the world.</div>
+          <p class="cb-desc">Creovisia is the parent brand housing AI-first tools for teachers, students, and creators
+            &mdash; a creative identity powering real products with real users.</p>
+        </div>
+        <div class="cb-status">
+          <div class="status-live">Active &amp; Shipping</div>
+          <div class="cb-meta">Est. 2024 &middot; Tamil Nadu, India</div>
+        </div>
+      </div>
+    </div>
+    <div class="prod-grid">
+      <div class="prod-card reveal d1">
+        <div class="prod-num">Product 01</div>
+        <div class="prod-ico">&#x1F4C4;</div>
+        <div class="prod-name">VoidSEO AI</div>
+        <div class="prod-tagline">Question paper creation, reimagined.</div>
+        <p class="prod-desc">A SaaS platform for Tamil Nadu Samacheer Kalvi Class 10 teachers. Generate bilingual
+          question papers across 5 subjects, download as PDF, and access a PYQ bank &mdash; in minutes.</p>
+        <div class="prod-badges">
+          <span class="badge badge-live">&#x25CF; Live</span>
+          <span class="badge">EdTech</span><span class="badge">SaaS</span><span class="badge">TN Board</span>
+        </div>
+        <div class="pricing-row">
+          <div><span class="pr-label">Teacher Pro</span><span class="pr-val">&#x20B9;99<span>/mo</span></span></div>
+          <div><span class="pr-label">School Plan</span><span class="pr-val">&#x20B9;999<span>/yr</span></span></div>
+        </div>
+        <a href="#" class="prod-link">Explore VoidSEO AI &#x2192;</a>
+      </div>
+      <div class="prod-card pc-b reveal d2">
+        <div class="prod-num">Product 02</div>
+        <div class="prod-ico">&#x1F9E0;</div>
+        <div class="prod-name">EDITH AI</div>
+        <div class="prod-tagline">AI that explains, not just answers.</div>
+        <p class="prod-desc">An AI-powered doubt-solving platform for students. Ask any academic question and get
+          curriculum-aligned explanations. Built on free APIs with 5 free doubts/day.</p>
+        <div class="prod-badges">
+          <span class="badge badge-soon">&#x25D0; Coming Soon</span>
+          <span class="badge">AI-Powered</span><span class="badge">Students</span><span class="badge">Claude API</span>
+        </div>
+        <div class="pricing-row">
+          <div><span class="pr-label">Free Tier</span><span class="pr-val">5 <span>doubts/day</span></span></div>
+          <div><span class="pr-label">Seed Ask</span><span class="pr-val">&#x20B9;25L</span></div>
+        </div>
+        <a href="#contact" class="prod-link">Connect to Invest &#x2192;</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- VISION -->
+  <section id="vision">
+    <div class="reveal">
+      <div class="sec-tag">06 / Vision</div>
+      <h2 class="sec-title">Building for <em>India</em>,<br>scaling to the world.</h2>
+    </div>
+    <div class="vision-grid">
+      <div class="vc reveal d1">
+        <div class="vc-num">01</div>
+        <div class="vc-icon">&#x1F3EB;</div>
+        <div class="vc-title">Accessible Education</div>
+        <p class="vc-text">Quality EdTech tools shouldn't be a privilege. Every teacher and student deserves
+          intelligent, affordable tools.</p>
+      </div>
+      <div class="vc reveal d2">
+        <div class="vc-num">02</div>
+        <div class="vc-icon">&#x1F916;</div>
+        <div class="vc-title">AI-First Products</div>
+        <p class="vc-text">AI isn't a gimmick &mdash; it's the engine. Every feature is designed to make the experience
+          genuinely smarter for real users.</p>
+      </div>
+      <div class="vc reveal d3">
+        <div class="vc-num">03</div>
+        <div class="vc-icon">&#x1F680;</div>
+        <div class="vc-title">Ship, Learn, Scale</div>
+        <p class="vc-text">I ship fast, gather real feedback, and iterate. Speed is the strategy. Waiting for perfect is
+          the enemy of shipped.</p>
+      </div>
+      <div class="vc reveal">
+        <div class="vc-num">04</div>
+        <div class="vc-icon">&#x1F30F;</div>
+        <div class="vc-title">Southeast Asia &amp; Beyond</div>
+        <p class="vc-text">Tamil Nadu is just the start. The long-term vision is bringing curriculum-native AI tools to
+          students across Southeast Asia.</p>
+      </div>
+      <div class="vc reveal d1">
+        <div class="vc-num">05</div>
+        <div class="vc-icon">&#x1F4A1;</div>
+        <div class="vc-title">Creator-Led Brand</div>
+        <p class="vc-text">Every product carries the same DNA: creative, useful, and made with genuine care for the
+          people who use it.</p>
+      </div>
+      <div class="vc reveal d2">
+        <div class="vc-num">06</div>
+        <div class="vc-icon">&#x1F517;</div>
+        <div class="vc-title">Multi-Product Ecosystem</div>
+        <p class="vc-text">Each product is a node in a growing ecosystem that creates a flywheel of value for schools
+          who rely on them.</p>
+      </div>
+    </div>
+    <div class="v-quote reveal">
+      <p>Creativity isn't just an input &mdash; it's the product itself. Everything I build starts with the belief that
+        education can be more beautiful, more intelligent, and more human.</p>
+      <cite class="v-cite">&mdash; Mukil Karki M, Founder of Creovisia</cite>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-head reveal">
+      <div class="sec-tag" style="justify-content:center;">07 / Contact</div>
+      <h2 class="sec-title">Let's build<br>something <em>together.</em></h2>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-left reveal">
+        <p>Whether you're a school, investor, fellow founder, or someone who just wants to talk EdTech and AI &mdash;
+          I'm always open to a great conversation.</p>
+        <div class="c-links">
+          <a href="mailto:mukilkarkimail@gmail.com" class="c-link">
+            <div class="c-ico">&#x2709;</div>
+            <div class="c-info"><span class="c-label">Email</span><span class="c-val">mukilkarkimail@gmail.com</span></div>
+            <span class="c-arr">&#x2192;</span>
+          </a>
+          <a href="https://creovisia.vercel.app" class="c-link" target="_blank">
+            <div class="c-ico">&#x1F310;</div>
+            <div class="c-info"><span class="c-label">Website</span><span class="c-val">creovisia.vercel.app</span>
+            </div>
+            <span class="c-arr">&#x2192;</span>
+          </a>
+          <!-- <a href="#" class="c-link">
+            <div class="c-ico">X</div>
+            <div class="c-info"><span class="c-label">Twitter / X</span><span class="c-val">@mukil_karki</span></div>
+            <span class="c-arr">&#x2192;</span>
+          </a> -->
+          <a href="https://linkedin.com/in/mukilkarki" class="c-link">
+            <div class="c-ico">in</div>
+            <div class="c-info"><span class="c-label">LinkedIn</span><span
+                class="c-val">linkedin.com/in/mukilkarki</span></div>
+            <span class="c-arr">&#x2192;</span>
+          </a>
+          <a href="https://github.com/mukilkarki" class="c-link">
+            <div class="c-ico">&lt;/&gt;</div>
+            <div class="c-info"><span class="c-label">GitHub</span><span class="c-val">github.com/mukilkarki</span>
+            </div>
+            <span class="c-arr">&#x2192;</span>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form reveal d2">
+        <div class="f-row"><label class="f-label">Your Name</label><input type="text" class="f-input"
+            placeholder="What should I call you?"></div>
+        <div class="f-row"><label class="f-label">Email</label><input type="email" class="f-input"
+            placeholder="your@email.com"></div>
+        <div class="f-row"><label class="f-label">Subject</label><input type="text" class="f-input"
+            placeholder="Investing &middot; Collab &middot; Schools &middot; Hi"></div>
+        <div class="f-row"><label class="f-label">Message</label><textarea class="f-input"
+            placeholder="Tell me what's on your mind..."></textarea></div>
+        <button class="f-btn" id="sendBtn">Send Message</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <span class="ft-l">Mukil Karki M</span>
+    <span class="ft-c">Creativity into Reality</span>
+    <span class="ft-r">&copy; 2025 Creovisia. All rights reserved.</span>
+  </footer>
+
+  <script>
+    function dToggle() { document.getElementById('drawer').classList.contains('open') ? dClose() : dOpen() }
+    function dOpen() { document.getElementById('drawer').classList.add('open'); document.getElementById('overlay').classList.add('open'); document.getElementById('floatBtn').classList.add('open'); document.body.style.overflow = 'hidden' }
+    function dClose() { document.getElementById('drawer').classList.remove('open'); document.getElementById('overlay').classList.remove('open'); document.getElementById('floatBtn').classList.remove('open'); document.body.style.overflow = '' }
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') dClose() });
+
+    var elC = document.getElementById('cur'), elR = document.getElementById('curl'), mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', function (e) { mx = e.clientX; my = e.clientY; elC.style.left = mx + 'px'; elC.style.top = my + 'px' });
+    (function tick() { rx += (mx - rx) * .11; ry += (my - ry) * .11; elR.style.left = rx + 'px'; elR.style.top = ry + 'px'; requestAnimationFrame(tick) })();
+    document.querySelectorAll('a,button,.chip,.vc,.edu-card,.proj-card,.prod-card,.c-link').forEach(function (el) {
+      el.addEventListener('mouseenter', function () { elC.style.transform = 'translate(-50%,-50%) scale(2)'; elR.style.transform = 'translate(-50%,-50%) scale(1.4)'; elR.style.borderColor = 'rgba(124,110,247,.9)' });
+      el.addEventListener('mouseleave', function () { elC.style.transform = 'translate(-50%,-50%) scale(1)'; elR.style.transform = 'translate(-50%,-50%) scale(1)'; elR.style.borderColor = 'rgba(124,110,247,.5)' });
+    });
+
+    var revEls = document.querySelectorAll('.reveal');
+    var ro = new IntersectionObserver(function (entries) { entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); ro.unobserve(e.target) } }) }, { threshold: 0.08 });
+    revEls.forEach(function (el) { ro.observe(el) });
+
+    var secs = document.querySelectorAll('section[id]'), drAs = document.querySelectorAll('.dr-nav a');
+    window.addEventListener('scroll', function () { var c = ''; secs.forEach(function (s) { if (window.scrollY >= s.offsetTop - 180) c = s.id }); drAs.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + c) }) });
+
+    var ey = document.getElementById('eyebrow'), et = 'Founder & Builder · EdTech · AI', ei = 0;
+    ey.style.opacity = '1';
+    setTimeout(function () { var t = setInterval(function () { ey.textContent = et.slice(0, ++ei); if (ei === et.length) clearInterval(t) }, 50) }, 500);
+
+    document.getElementById('sendBtn').addEventListener('click', function () { this.textContent = 'Message Sent \u2713'; this.style.background = 'linear-gradient(135deg,#00f5c4,#7c6ef7)' });
+  </script>
+</body>
+
+</html>
