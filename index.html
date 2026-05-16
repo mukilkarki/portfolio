@@ -217,7 +217,8 @@
           <a href="#" class="soc-link"><span class="soc-ico">X</span>@mukil_karki</a>
           <a href="#" class="soc-link"><span class="soc-ico">in</span>linkedin.com/in/mukilkarki</a>
           <a href="#" class="soc-link"><span class="soc-ico">&lt;/&gt;</span>github.com/mukilkarki</a>
-          <a href="https://creovisia.vercel.app" class="soc-link"><span class="soc-ico">&#x1F310;</span>creovisia.vercel.app</a>
+          <a href="https://creovisia.vercel.app" class="soc-link"><span
+              class="soc-ico">&#x1F310;</span>creovisia.vercel.app</a>
         </div>
       </div>
       <div class="info-card ic-c reveal d3">
@@ -242,7 +243,8 @@
         <div class="edu-year">2026 &mdash; on going</div>
         <div class="edu-deg">B.E./B.Tech Electronics and Communication &amp; Engineering (ECE)</div>
         <div class="edu-inst">The Sethu Institute of Technology (SIT), Virudhunagar</div>
-        <p class="edu-desc">Focused on . It covers semiconductor physics, circuit design, and telecommunications, opening doors to careers in chip design (VLSI), embedded systems, IoT, AI, and the IT/software sector.. Active
+        <p class="edu-desc">Focused on . It covers semiconductor physics, circuit design, and telecommunications,
+          opening doors to careers in chip design (VLSI), embedded systems, IoT, AI, and the IT/software sector.. Active
           in the college coding club and technical events.</p>
         <span class="edu-badge">Current &middot; 1st Year</span>
       </div>
@@ -305,7 +307,7 @@
           <span class="exp-tag">Client Work</span><span class="exp-tag">Landing Pages</span>
         </div>
       </div>
-     <!-- <div class="exp-item reveal d3">
+      <!-- <div class="exp-item reveal d3">
         <div class="exp-period">Mar 2023 &mdash; May 2023</div>
         <div class="exp-role">Web Development Intern</div>
         <div class="exp-co">TechSpark Solutions, Chennai</div>
@@ -498,7 +500,8 @@
         <div class="c-links">
           <a href="mailto:mukilkarkimail@gmail.com" class="c-link">
             <div class="c-ico">&#x2709;</div>
-            <div class="c-info"><span class="c-label">Email</span><span class="c-val">mukilkarkimail@gmail.com</span></div>
+            <div class="c-info"><span class="c-label">Email</span><span class="c-val">mukilkarkimail@gmail.com</span>
+            </div>
             <span class="c-arr">&#x2192;</span>
           </a>
           <a href="https://creovisia.vercel.app" class="c-link" target="_blank">
@@ -547,33 +550,7 @@
     <span class="ft-r">&copy; 2025 Creovisia. All rights reserved.</span>
   </footer>
 
-  <script>
-    function dToggle() { document.getElementById('drawer').classList.contains('open') ? dClose() : dOpen() }
-    function dOpen() { document.getElementById('drawer').classList.add('open'); document.getElementById('overlay').classList.add('open'); document.getElementById('floatBtn').classList.add('open'); document.body.style.overflow = 'hidden' }
-    function dClose() { document.getElementById('drawer').classList.remove('open'); document.getElementById('overlay').classList.remove('open'); document.getElementById('floatBtn').classList.remove('open'); document.body.style.overflow = '' }
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') dClose() });
-
-    var elC = document.getElementById('cur'), elR = document.getElementById('curl'), mx = 0, my = 0, rx = 0, ry = 0;
-    document.addEventListener('mousemove', function (e) { mx = e.clientX; my = e.clientY; elC.style.left = mx + 'px'; elC.style.top = my + 'px' });
-    (function tick() { rx += (mx - rx) * .11; ry += (my - ry) * .11; elR.style.left = rx + 'px'; elR.style.top = ry + 'px'; requestAnimationFrame(tick) })();
-    document.querySelectorAll('a,button,.chip,.vc,.edu-card,.proj-card,.prod-card,.c-link').forEach(function (el) {
-      el.addEventListener('mouseenter', function () { elC.style.transform = 'translate(-50%,-50%) scale(2)'; elR.style.transform = 'translate(-50%,-50%) scale(1.4)'; elR.style.borderColor = 'rgba(124,110,247,.9)' });
-      el.addEventListener('mouseleave', function () { elC.style.transform = 'translate(-50%,-50%) scale(1)'; elR.style.transform = 'translate(-50%,-50%) scale(1)'; elR.style.borderColor = 'rgba(124,110,247,.5)' });
-    });
-
-    var revEls = document.querySelectorAll('.reveal');
-    var ro = new IntersectionObserver(function (entries) { entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); ro.unobserve(e.target) } }) }, { threshold: 0.08 });
-    revEls.forEach(function (el) { ro.observe(el) });
-
-    var secs = document.querySelectorAll('section[id]'), drAs = document.querySelectorAll('.dr-nav a');
-    window.addEventListener('scroll', function () { var c = ''; secs.forEach(function (s) { if (window.scrollY >= s.offsetTop - 180) c = s.id }); drAs.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + c) }) });
-
-    var ey = document.getElementById('eyebrow'), et = 'Founder & Builder · EdTech · AI', ei = 0;
-    ey.style.opacity = '1';
-    setTimeout(function () { var t = setInterval(function () { ey.textContent = et.slice(0, ++ei); if (ei === et.length) clearInterval(t) }, 50) }, 500);
-
-    document.getElementById('sendBtn').addEventListener('click', function () { this.textContent = 'Message Sent \u2713'; this.style.background = 'linear-gradient(135deg,#00f5c4,#7c6ef7)' });
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
