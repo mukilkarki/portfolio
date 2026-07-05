@@ -83,22 +83,12 @@ export const site = {
   ],
 
   timeline: [
-    {
-      year: "2026-****",
-      title: "Sethu Institute of Technology, Pulloor, Kariapatti – 626 115, Virudhunagar District, Tamilnadu, INDIA",
-      description: "BE. ECE (Electronics and Communication Engineering) - Planing to master it ",
-    },
-
-    {
+     {
       year: "Now",
       title: "Founder, Creovisia",
       description: "Building an AI education and technology product studio.",
     },
-    {
-      year: "Now",
-      title: "Higher Secondary Student",
-      description: "Balancing formal education with self-directed learning in AI and security.",
-    },
+    
     {
       year: "Ongoing",
       title: "Self-Taught AI Practitioner",
@@ -108,17 +98,30 @@ export const site = {
 
   education: [
     {
-      title: "Higher Secondary Education",
-      place: "", // TODO: add school name if you want it public
-      period: "Present",
-      description: "Currently completing higher secondary education.",
-    },
-    {
       title: "Self-Taught: Artificial Intelligence",
-      place: "Independent study",
+      place: "At Home",
       period: "Ongoing",
       description: "Continuous, self-directed learning in AI, prompting, and applied machine learning.",
     },
+    {
+      title: "BE. ECE (Electronics and Communication Engineering)",
+      place: "Sethu Institute of Technology, Pulloor, Kariapatti – 626 115, Virudhunagar District, Tamilnadu.", // TODO: add school name if you want it publice
+      period: "Present",
+      description: "lets start a new journey of education in deep science.",
+    },
+    {
+      title: "Higher Secondary Education",
+      place: "The Krishnamal Ramasubbaiyer School (KRS) is located at T.V.R Nagar, Aruppukottai Road, Eliyarpathi Village, Madurai, Tamil Nadu, PIN – 625022.", // TODO: add school name if you want it public
+      period: "2024-2026",
+      description: "Currently completing higher secondary education.",
+    },
+    {
+      title: "Low-Higher Education",
+      place: "St. Mary's Matriculation School in Kariapatti is located on Kallakudi Road, Kariapatti, Virudhunagar District, Tamil Nadu 626106.", // TODO: add school name if you want it public
+      period: "****-2024",
+      description: "Wbere i learn about respect,happy vibe,",
+    },
+    
   ],
 
   achievements: [], // TODO: add achievements/certificates later
