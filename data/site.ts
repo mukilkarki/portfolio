@@ -84,6 +84,12 @@ export const site = {
 
   timeline: [
     {
+      year: "2026-****",
+      title: "Sethu Institute of Technology, Pulloor, Kariapatti – 626 115, Virudhunagar District, Tamilnadu, INDIA",
+      description: "BE. ECE (Electronics and Communication Engineering) - Planing to master it ",
+    },
+
+    {
       year: "Now",
       title: "Founder, Creovisia",
       description: "Building an AI education and technology product studio.",
