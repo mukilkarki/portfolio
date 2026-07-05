@@ -22,7 +22,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-line/60 bg-base/80 backdrop-blur-md">
       <div className="container-narrow flex h-16 items-center justify-between">
         <Link href="/" className="font-display text-lg font-bold tracking-tight">
-          {site.brandName}
+          {site.fullName}
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
