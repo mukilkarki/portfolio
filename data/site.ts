@@ -14,7 +14,7 @@ export const site = {
   about:
     "I'm Mukil Karki M, the founder of Creovisia, an AI education and technology product studio. I'm passionate about artificial intelligence, software development, cybersecurity, and building digital products that solve real-world problems. My mission is to simplify complex technology, inspire curiosity, and create impactful solutions through innovation and continuous learning.",
   aboutTa:
-    "நான் முகில் கார்த்தி எம், Creovisia நிறுவனத்தின் நிறுவனர். செயற்கை நுண்ணறிவு, மென்பொருள் மேம்பாடு, சைபர் பாதுகாப்பு ஆகியவற்றில் ஆர்வமுள்ளவன். சிக்கலான தொழில்நுட்பத்தை எளிமையாக்கி, ஆர்வத்தைத் தூண்டி, புதுமையின் மூலம் தாக்கத்தை ஏற்படுத்தும் தீர்வுகளை உருவாக்குவதே எனது நோக்கம்.",
+    "நான் முகில் கார்க்கி மு எம், Creovisia நிறுவனத்தின் நிறுவனர். செயற்கை நுண்ணறிவு, மென்பொருள் மேம்பாடு, சைபர் பாதுகாப்பு ஆகியவற்றில் ஆர்வமுள்ளவன். சிக்கலான தொழில்நுட்பத்தை எளிமையாக்கி, ஆர்வத்தைத் தூண்டி, புதுமையின் மூலம் தாக்கத்தை ஏற்படுத்தும் தீர்வுகளை உருவாக்குவதே எனது நோக்கம்.",
 
   social: {
     github: "https://github.com/mukilkarki",
