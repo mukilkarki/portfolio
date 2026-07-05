@@ -18,9 +18,9 @@ export default function Contact() {
 
     // TODO: replace with your real EmailJS Service ID, Template ID, and Public Key.
     // Sign up free at https://www.emailjs.com — no backend server required.
-    const SERVICE_ID = "YOUR_EMAILJS_SERVICE_ID";
-    const TEMPLATE_ID = "YOUR_EMAILJS_TEMPLATE_ID";
-    const PUBLIC_KEY = "YOUR_EMAILJS_PUBLIC_KEY";
+    const SERVICE_ID = "service_xjb8zur";
+    const TEMPLATE_ID = "template_4ah69hr";
+    const PUBLIC_KEY = "rKtmlDZKuaY8eb1pP";
 
     try {
       if (SERVICE_ID.startsWith("YOUR_")) {
