@@ -6,7 +6,7 @@ import { site } from "@/data/site";
 import { useLang } from "@/lib/i18n";
 
 const statusLines = [
-  "identity.load(mukil_karki_m)",
+  "identity.load(mukilkarki)",
   "studio.init(creovisia)",
   "mission: simplify AI. build fearlessly.",
 ];
