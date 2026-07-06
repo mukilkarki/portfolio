@@ -60,7 +60,7 @@ export const site = {
       ],
       stack: ["HTML", "CSS", "JavaScript"],
       github: "https://github.com/mukilkarki/ECE-SPARK", // TODO: add GitHub link
-      live: "https://ecespark.netlify.app/", // TODO: add live demo link
+      demo: "https://ecespark.netlify.app/", // TODO: add live demo link
       metrics: { performance: "TBD", accessibility: "TBD" },
     },
     {
