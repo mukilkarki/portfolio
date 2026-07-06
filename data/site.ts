@@ -36,8 +36,8 @@ export const site = {
   ],
 
   techStack: {
-    Languages: ["JavaScript", "HTML", "CSS", "Python", "C", "C++"],
-    Tools: ["Git", "GitHub", "VS Code", "Figma", "Firebase", "Vercel", "Kali Linux"],
+    Languages: ["C", "C++", "CSS", "HTML", "JavaScript", "Next.js", "Python", "Tailwind CSS", "TypeScript"],
+    Tools: ["Android Studio", "Canva", "Claude AI", "ChatGPT", "Firebase", "Figma", "Git", "GitHub", "GitHub Copilot", "Kali Linux", "Netlify", "OpenAI API", "Supabase", "Termux", "Vercel", "VS Code"],
   },
 
   projects: [
