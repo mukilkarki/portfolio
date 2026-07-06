@@ -42,6 +42,28 @@ export const site = {
 
   projects: [
     {
+      slug: "ECE SPARK",
+      name: "ECE SPARK",
+      description:
+        "⚡ Official ECE-SPARK platform by Creovisia — empowering ECE students with smart learning, AI assistance, progress tracking, and career development.",
+      problem:
+        "New ECE students has not a centralized platform that bridges the gap between academic learning and real-world industry requirements.",
+      solution:
+        "ECE-SPARK is a modern student productivity and career development platform built specifically for Electronics and Communication Engineering students. The platform combines academic management, skill development, project tracking, placement preparation, and emerging technology roadmaps into a single ecosystem. From first-year fundamentals to industry-ready expertise, ECE-SPARK helps students track, learn, build, and grow throughout their engineering journey.",
+      features: [
+        "📚 Academic Management",
+        "📈 Performance Tracking",
+        "🧮 Student Utilities",
+        "💼 Career Development",
+        "🤖 AI Engineering",
+        "🔐 Cybersecurity",
+      ],
+      stack: ["HTML", "CSS", "JavaScript"],
+      github: "https://github.com/mukilkarki/ECE-SPARK", // TODO: add GitHub link
+      live: "https://ecespark.netlify.app/", // TODO: add live demo link
+      metrics: { performance: "TBD", accessibility: "TBD" },
+    },
+    {
       slug: "promptforge",
       name: "PromptForge",
       description:
