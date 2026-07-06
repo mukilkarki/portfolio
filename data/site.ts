@@ -8,7 +8,7 @@ export const site = {
   brandName: "Creovisia",
   tagline: "Understand Deeply. Create Fearlessly.",
   role: "Founder, Creovisia — AI Developer & Technology Builder",
-  url: "https://creovisia.com", // TODO: replace with your real deployed domain
+  url: "https://mukilkarki.vercel.com", // TODO: replace with your real deployed domain
   email: "hello@creovisia.com", // TODO: replace with your real email
   location: "India",
   about:
