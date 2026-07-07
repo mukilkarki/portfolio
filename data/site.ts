@@ -127,19 +127,19 @@ export const site = {
     },
     {
       title: "BE. ECE (Electronics and Communication Engineering)",
-      place: "Sethu Institute of Technology, Pulloor, Kariapatti – 626 115, Virudhunagar District, Tamilnadu.", // TODO: add school name if you want it publice
+      place: "", // TODO: add school name if you want it publice (Sethu Institute of Technology, Pulloor, Kariapatti – 626 115, Virudhunagar District, Tamilnadu.)
       period: "Present",
       description: "lets start a new journey of education in deep science.",
     },
     {
       title: "Higher Secondary Education",
-      place: "The Krishnamal Ramasubbaiyer School (KRS) is located at T.V.R Nagar, Aruppukottai Road, Eliyarpathi Village, Madurai, Tamil Nadu, PIN – 625022.", // TODO: add school name if you want it public
+      place: "", // TODO: add school name if you want it public (The Krishnamal Ramasubbaiyer School (KRS) is located at T.V.R Nagar, Aruppukottai Road, Eliyarpathi Village, Madurai, Tamil Nadu, PIN – 625022.)
       period: "2024-2026",
       description: "Currently completing higher secondary education.",
     },
     {
       title: "Low-Higher Education",
-      place: "St. Mary's Matriculation School in Kariapatti is located on Kallakudi Road, Kariapatti, Virudhunagar District, Tamil Nadu 626106.", // TODO: add school name if you want it public
+      place: "", // TODO: add school name if you want it public (St. Mary's Matriculation School in Kariapatti is located on Kallakudi Road, Kariapatti, Virudhunagar District, Tamil Nadu 626106.)
       period: "****-2024",
       description: "Wbere i learn about respect,happy vibe,",
     },
