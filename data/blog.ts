@@ -40,6 +40,29 @@ export const posts: BlogPost[] = [
     tags: ["Artificial Intelligence", "Prompting", "Self-Taught"],
     readingTime: "4 min read",
   },
+  {
+  slug: "ece-spark",
+  title: "ECE-SPARK: An AI-Powered Learning Platform for ECE Students",
+  excerpt:
+    "ECE-SPARK is a smart learning platform designed to help Electronics and Communication Engineering students learn faster with AI assistance, track their progress, and prepare for successful careers.",
+  content: [
+    "ECE-SPARK was created to solve a common problem faced by ECE students—finding quality learning resources, staying consistent, and preparing for industry expectations in one place. Instead of switching between multiple platforms, students can access everything through a single, organized experience.",
+    "The platform integrates AI-powered assistance to explain concepts, answer questions, and support personalized learning. Combined with structured resources and progress tracking, it helps students build strong fundamentals while improving their daily learning habits.",
+    "Beyond academics, ECE-SPARK focuses on career development by encouraging skill-building, project-based learning, and continuous improvement. The goal is to bridge the gap between classroom education and real-world engineering skills through modern technology and artificial intelligence.",
+  ],
+  date: "2026-06-03",
+  category: "EdTech",
+  tags: [
+    "Artificial Intelligence",
+    "Education",
+    "ECE",
+    "Learning Platform",
+    "Student",
+    "EdTech",
+    "Creovisia"
+  ],
+  readingTime: "5 min read",
+},
 ];
 
 export function getPostBySlug(slug: string) {
